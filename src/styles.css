@@ -708,12 +708,12 @@ footer {
     border-radius: 0.5rem;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Segment7';
   src: url('https://assets.codepen.io/4175254/Segment7-V4ag.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
-}
+} */
 
 .countdown {
   display: flex;
