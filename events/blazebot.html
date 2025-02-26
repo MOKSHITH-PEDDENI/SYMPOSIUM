@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Enhanced viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Apple mobile meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>BLAZE BOT</title>
+    <link rel="stylesheet" href="events.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Timmana&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="assets/img/squid-game-favicon.png">
+  
+    
+    
+</head>
+<body>
+    <div class="splash-screen" id="splashScreen">
+        <video class="splash-video" autoplay muted>
+          <source src="assets/video/squid-game-text.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+  
+      
+  
+    <div class="hidden-content" id="mainContent">
+    <!-- Background Video -->
+    <video autoplay loop id="background-video" muted >
+        <source src="assets/video/squid.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Background Audio -->
+    <!-- <audio autoplay loop id="background-audio">
+        <source src="assets/audio/squidgame.mp3" type="audio/mp3">
+        Your browser does not support HTML5 audio.
+    </audio> -->
+
+    <div class="container">
+        <!-- <div class="left">
+            <img src="assets/img/squid-game.png" alt="Event Image">
+        </div> -->
+        <div class="right">
+            <div class="heading-reg">
+                <!-- <h1 class="blaze-bot-heading" style="top: 0%;">BLAZE BOT</h1> -->
+                <!-- <button id="register-button">Registration Closed</button> -->
+                <img src="assets/img/logo-blaze-bot.png" alt="BLAZE BOT" 
+         style="width: 100%; height: auto; display: block; max-width: 100%;">
+                 
+            </div>
+            
+            <p id="description">
+                <h2>Blaze Bot-Run untill you can !</h2><br><ol>Gear up for Blaze Bot,an electrifying AI-powered escape room challenge ! 
+                </ol>
+            </p>
+            <h2>Level 1: The gauntlet</h2>
+            <ol>
+                Face technical challenges to escape the blaze your speed and knowledge determine your safety. The faster you solve, the safer you stay!
+            </ol>
+        
+            <h2>Level 2 : The Way out</h2>
+            <ol>Now, the escape takes an exciting turn! Navigate through AI-related strategies, 
+            tackle engaging challenges, and explore fun, innovative concepts that test your adaptability and problem-solving skills.</ol>
+            <br>
+            <div class="heading-reg">
+                <div class="container_r">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqwXh32NdJwRI07mhVQlvPyvKxYV2gDVuWWFq4CyydPT_-sQ/viewform" class="button" target="_blank">
+                       <div class="button__content">
+                          <span class="button__text">Register</span>
+                          <div class="button__reflection-1"></div>
+                          <div class="button__reflection-2"></div>
+                       </div>
+                       <img src="assets/img/star.png" alt="" class="button__star-1">
+                       <img src="assets/img/star.png" alt="" class="button__star-2">
+                       <img src="assets/img/circle.png" alt="" class="button__circle-1">
+                       <img src="assets/img/circle.png" alt="" class="button__circle-2">
+                       <img src="assets/img/diamond.png" alt="" class="button__diamond">
+                       <img src="assets/img/triangle.png" alt="" class="button__triangle">
+                       <div class="button__shadow"></div>
+                    </a>                    
+                </div>
+            </div>
+            <br>
+            <div>
+                <center>
+                    <h2>Event Co-ordinators</h2>
+                </center>
+            </div>
+            <div class="contact">
+                <div>
+                    <h3 style="color: black;">Gokul kansihk P</h3>
+                    <p><a href="tel:+91 9629412717">+91 9629412717</a></p>
+                </div>
+                <div>
+                    <h3 style="color: black;">Hemadharshini G</h3>                    
+                    <p><a href="tel:+91 8610536694">+91 8610536694</a></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        // Show main content after video ends
+        document.addEventListener('DOMContentLoaded', function() {
+          const video = document.querySelector('.splash-video');
+          const splashScreen = document.getElementById('splashScreen');
+          const mainContent = document.getElementById('mainContent');
+  
+          video.addEventListener('ended', function() {
+            splashScreen.style.display = 'none';
+            mainContent.style.display = 'flex';
+          });
+  
+          // Fallback in case video doesn't autoplay
+          setTimeout(function() {
+            splashScreen.style.display = 'none';
+            mainContent.style.display = 'flex';
+          }, 2500); // 3 seconds fallback
+        });
+      </script>
+   
+</body>
+</html>
