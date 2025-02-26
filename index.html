@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta name="description" content="Hello this is my first web page!." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,7 +47,10 @@
 
     
     <div class="splash-screen" id="splashScreen">
-      
+      <audio autoplay id="background-audio">
+        <source src="src/audio/intro-sound.mp3" type="audio/mp3">
+        Your browser does not support HTML5 audio.
+      </audio>
     
       <video class="splash-video" autoplay muted>
         <source src="src/videos/t-intro.mp4" type="video/mp4">
