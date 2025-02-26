@@ -13,7 +13,7 @@
     <title>TEZAS '2k25</title>
    
     <link rel="icon" type="image/png" href="src/images/fav.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+ 
     <script src="https://unpkg.com/alpinejs" defer></script>
     <style>
       /* Add splash screen styles */
@@ -47,7 +47,9 @@
 
     
     <div class="splash-screen" id="splashScreen">
-      
+      <audio id="background-audio" muted autoplay>
+        <source src="./src/audio/intro-sound.mp3" type="audio/mpeg">
+      </audio>
      
       <video class="splash-video" autoplay muted>
         <source src="src/videos/t-intro.mp4" type="video/mp4">
