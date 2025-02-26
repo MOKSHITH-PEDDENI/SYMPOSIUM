@@ -33,27 +33,8 @@ body {
 }
 
 /* Responsive adjustments for mobile */
-@media (max-width: 767.98px) {
-  .logo-img {
-      width: 60px; /* Decrease size for mobile */
-      height: 20px; /* Decrease size for mobile */
-  }
-
-  .logotop {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .navv-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-  }
-
-  .nav-button {
-      font-size: 14px; /* Adjust button font size for mobile */
-  }
+.soemthing{
+  align-items: center;
 }
 
 @media (max-width: 480px) {
@@ -61,6 +42,17 @@ body {
       width: 30px; /* Decrease size for mobile */
       height: 10px; /* Decrease size for mobile */
   }
+  .footer-section {
+    min-width: unset;
+}
+.social-icons {
+  gap: 1rem; /* Reduce gap on small screens */
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px; /* Maintain square ratio */
+}
 }
 
 .language__drop__down {
@@ -632,18 +624,47 @@ footer {
   background-color: #222;
   color: #fff;
   padding: 30px 0;
-  text-align: left;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+.footer-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.phone-link {
+  display: block;
+  margin-top: 0.5rem;
+  color: #e5e7eb;
+  text-decoration: none;
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  /* max-width: 1200px; */
-  margin: auto;
-  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+ 
+  
+}
+.contact-item {
+  margin: 1rem 0;
 }
 
+.social-icons img {
+  width: 45px;
+  height: 45px; /* Fixed height for perfect square */
+  object-fit: contain; /* Maintain aspect ratio */
+  padding: 5px; /* Add breathing space */
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+}
 /* Custom hover animations */
 .nav-button {
     position: relative;
@@ -817,6 +838,25 @@ footer {
   .segment-overlay {
     width: 60px;
   }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section {
+    width: 100%;
+    max-width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Added vertical centering */
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 100%; /* Ensure full width */
+  
+}
 }
 
 @media (max-width: 480px) {
@@ -938,4 +978,71 @@ footer {
 .events {
   padding: 50px 20px;
   text-align: center;
+}
+
+
+/* Add this to your existing CSS */
+.footer-section.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Optional: Ensure consistent icon sizing */
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Update the socials section */
+.footer-section.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Social icons container */
+.social-icons {
+  display: inline-flex; /* Changed from flex to inline-flex */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Social icon images */
+.social-icons img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  flex-shrink: 0; /* Prevent icons from shrinking */
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .social-icons img {
+    width: 35px;
+    height: 35px;
+  }
 }
