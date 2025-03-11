@@ -38,9 +38,8 @@ svg:hover {
   width: 100%;
   text-align: center;
 }
-.container {
-  margin: 0 auto; /* Added for extra centering assurance */
-  /* Keep existing container styles */
+/* .container {
+  margin: 0 auto; 
   background-color: rgba(255, 255, 255, 0.5);
   position: relative;
   z-index: 2;
@@ -57,6 +56,81 @@ svg:hover {
 
 .container:hover {
   transform: scale(1.02);
+  background-color: rgba(4, 4, 4, 0.5);
+}
+
+
+.container:hover * {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  --tw-translate-y: -2px;
+  --tw-ring-offset-width: 2px;
+  background: linear-gradient(to right, #7296d0, #d212d8, #ff7f50); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease-in-out; 
+  transform: translateX(var(--tw-translate-x)) 
+            translateY(var(--tw-translate-y)) 
+            scale(var(--tw-scale-x), var(--tw-scale-y));
+} */
+.container {
+  margin: 0 auto;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 700px;
+  height: 90vh;
+  transition: transform 0.5s ease-in-out;
+  overflow-y: auto;
+  animation: slideUp 1s ease-out forwards;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  background-color: rgba(4, 4, 4, 0.7);
+}
+
+/* Default text color for all elements inside container */
+
+
+/* Gradient effect only for h2 tags on container hover */
+.container:hover h2 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  --tw-translate-y: -2px;
+  --tw-ring-offset-width: 2px;
+  background: linear-gradient(to right, #7296d0, #d212d8, #ff7f50); 
+    /* background: linear-gradient(to right, #98e0ee, #4a62ee);  */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(var(--tw-translate-x)) 
+            translateY(var(--tw-translate-y)) 
+            scale(var(--tw-scale-x), var(--tw-scale-y));
+}
+
+/* Ensure other text stays white on hover */
+.container:hover *:not(h2) {
+  color: #ffffff; /* White text for everything except h2 */
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Starts smaller */
+}
+100% {
+    opacity: 1;
+    transform: scale(1); /* Ends at normal size */
+}
 }
 
 ::-webkit-scrollbar {
@@ -679,4 +753,21 @@ a {
   height: 100%;
   justify-content: center;
   align-items: center;
+}
+
+
+.text-hover:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  --tw-translate-y: -2px;
+  --tw-ring-offset-width: 2px;
+  
+  /* Hover gradient */
+  /* background: linear-gradient(to right, #7296d0, #d212d8);  */
+   background: linear-gradient(to right, #7296d0, #d212d8, #ff7f50); 
+ 
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
