@@ -450,14 +450,19 @@
                     }
             
                     function getTimeRemaining(target) {
-                        const total = target - Date.now();
-                        const seconds = Math.floor((total / 1000) % 60);
-                        const minutes = Math.floor((total / 1000 / 60) % 60);
-                        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-                        const days = Math.floor(total / (1000 * 60 * 60 * 24));
-            
-                        return { days, hours, minutes, seconds, total };
+                    const total = target - Date.now();
+                    if (total <= 0) {
+                        return { days: 0, hours: 0, minutes: 0, seconds: 0, total: 0 }; // Prevent negative values
                     }
+                    return {
+                        days: Math.floor(total / (1000 * 60 * 60 * 24)),
+                        hours: Math.floor((total / (1000 * 60 * 60)) % 24),
+                        minutes: Math.floor((total / 1000 / 60) % 60),
+                        seconds: Math.floor((total / 1000) % 60),
+                        total
+                    };
+                }
+
             
                     function updateAllSegments() {
                         const t = getTimeRemaining(targetDate);
